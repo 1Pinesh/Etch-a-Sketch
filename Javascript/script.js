@@ -35,11 +35,14 @@ function multipleCells(number) {
 
         // add the cells into container
         grid_con.appendChild(newCell);
-
+        //hover effect 
+       
         // eventlisner turn the cell black if the cell is clicked
         newCell.addEventListener("click", ()=> {
             newCell.style.background = "black";
         })
+
+
     }
 }
 
