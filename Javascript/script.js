@@ -1,3 +1,4 @@
+
 // Making a container
 const grid_con = document.createElement("div");
 
@@ -8,8 +9,16 @@ grid_con.classList.add("grid-con");
 grid_con.style.width = "500px";
 grid_con.style.height = "500px";
 
+// Making a input
+const input_box = document.createElement("input");
+input_box.id = "input_box"
+
 // adding the grid-con into the html file
+ document.body.appendChild(input_box)
 document.body.appendChild(grid_con);
+
+
+
 
 // Functon multiple cells
 function multipleCells(number) {
@@ -17,6 +26,9 @@ function multipleCells(number) {
     const cellSize = 500/number;
     // create give the amount of cells needed (e.g 16*16 = 256 divs)
     const squareNums = number * number;
+   
+    // put the current number on the input
+    input_box.placeholder = number
 
 //make a loop that will keep making cells 
     for(let i = 0; i <= squareNums ; i ++) {
