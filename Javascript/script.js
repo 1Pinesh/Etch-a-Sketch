@@ -9,13 +9,16 @@ grid_con.classList.add("grid-con");
 grid_con.style.width = "500px";
 grid_con.style.height = "500px";
 
-// Making a input
+// Making a input & Button
 const input_box = document.createElement("input");
-input_box.id = "input_box"
+const input_btn = document.createElement("button");
+input_box.id = "input_box";
+input_btn.ix = "inputBtn";
 
-// adding the grid-con into the html file
- document.body.appendChild(input_box)
-document.body.appendChild(grid_con);
+// adding the grid-con,input-box and button into the html file
+ document.body.appendChild(input_box);
+ document.body.appendChild(input_btn);
+ document.body.appendChild(grid_con);
 
 
 
