@@ -35,7 +35,7 @@ const input_box = document.createElement("input");
 const input_btn = document.createElement("button");
 input_btn.textContent = "Apply";
 input_box.id = "input_box";
-input_btn.ix = "inputBtn";
+input_btn.id = "inputBtn";
 input_con.appendChild(input_box);
 input_con.appendChild(input_btn);
 
