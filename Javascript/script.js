@@ -13,10 +13,19 @@ document.body.appendChild(grid_con)
 
 // Functon multiple cells
 function multipleCells(number) {
+    // this will give each cell 
+    const cellSize = 500/number
+    // create give the amount of cells needed (e.g 16*16 = 256 divs)
     const squareNums = number * number
+
 //make a loop that will keep making cells 
     for(let i = 0; i <= squareNums ; i ++) {
+        // Make a new cell
         const newCell = document.createElement("div")
+        // give the cells a class 
+        newCell.classList.add("cells")
+
+        // add the cells into container
         grid_con.appendChild(newCell)
     }
 }
