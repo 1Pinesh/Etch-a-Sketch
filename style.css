@@ -24,6 +24,8 @@ padding: 0;
     background-color: black;
 }
 
-.tittle{
-    text-align: center;
+.title-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -1,5 +1,18 @@
 let valueChange
 
+// Title container
+const title_con =  document.createElement("div");
+title_con.classList.add("title-con");
+
+// Title
+const title = document.createElement("h1");
+title.classList.add("title")
+title.textContent = "Etch-a-Sketch"
+title.style.color = "#F03134"
+title.style.fontSize = "70px"
+
+title_con.appendChild(title)
+
 // Making a container
 const grid_con = document.createElement("div");
 
@@ -10,7 +23,7 @@ grid_con.classList.add("grid-con");
 grid_con.style.width = "500px";
 grid_con.style.height = "500px";
 
-
+// input-container
 // Making a input & Button
 const input_box = document.createElement("input");
 const input_btn = document.createElement("button");
@@ -19,6 +32,7 @@ input_box.id = "input_box";
 input_btn.ix = "inputBtn";
 
 // adding the grid-con,input-box and button into the html file
+ document.body.appendChild(title_con)
  document.body.appendChild(input_box);
  document.body.appendChild(input_btn);
  document.body.appendChild(grid_con);
