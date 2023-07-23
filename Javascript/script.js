@@ -13,8 +13,11 @@ title.style.fontSize = "70px"
 
 title_con.appendChild(title)
 
-// Making a container
+// Making a grid-container
+const table_con = document.createElement("div");
 const grid_con = document.createElement("div");
+table_con.classList.add("table-con");
+table_con.appendChild(grid_con);
 
 // give the grid-con an id
 grid_con.classList.add("grid-con");
@@ -39,7 +42,7 @@ input_con.appendChild(input_btn);
 // adding the grid-con,input-box and button into the html file
  document.body.appendChild(title_con)
  document.body.appendChild(input_con);
- document.body.appendChild(grid_con);
+ document.body.appendChild(table_con);
 
 
 // Functon multiple cells
