@@ -1,3 +1,5 @@
+let valueChange
+
 
 // Making a container
 const grid_con = document.createElement("div");
@@ -12,6 +14,7 @@ grid_con.style.height = "500px";
 // Making a input & Button
 const input_box = document.createElement("input");
 const input_btn = document.createElement("button");
+input_btn.textContent = "Apply"
 input_box.id = "input_box";
 input_btn.ix = "inputBtn";
 
@@ -21,15 +24,15 @@ input_btn.ix = "inputBtn";
  document.body.appendChild(grid_con);
 
 
-
-
 // Functon multiple cells
 function multipleCells(number) {
+
+    
     // this will give each cell 
     const cellSize = 500/number;
     // create give the amount of cells needed (e.g 16*16 = 256 divs)
     const squareNums = number * number;
-   
+    
     // put the current number on the input
     input_box.placeholder = number
 
@@ -61,6 +64,13 @@ function multipleCells(number) {
     }
 }
 
+input_btn.addEventListener("click",() => {
+    if (input_box.value == "") {
+        multipleCells(16);
+    } else {
+        multipleCells(input_box.value);
+    }
+})
+
 
 // Call mulipleCells
-multipleCells(16);
