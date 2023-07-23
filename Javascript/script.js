@@ -26,13 +26,12 @@ input_btn.ix = "inputBtn";
 
 // Functon multiple cells
 function multipleCells(number) {
-
-    
+    grid_con.textContent = ""
     // this will give each cell 
     const cellSize = 500/number;
     // create give the amount of cells needed (e.g 16*16 = 256 divs)
     const squareNums = number * number;
-    
+
     // put the current number on the input
     input_box.placeholder = number
 
@@ -64,13 +63,16 @@ function multipleCells(number) {
     }
 }
 
-input_btn.addEventListener("click",() => {
-    if (input_box.value == "") {
-        multipleCells(16);
-    } else {
-        multipleCells(input_box.value);
+// handle user input and create grid
+function inputHandle() {
+    valueChange = parseInt(input_box.value);
+    if (!isNaN(valueChange) && valueChange > 0) {
+        multipleCells(valueChange)
     }
-})
+}
 
+// change the grid to the user amout
+input_btn.addEventListener("click",inputHandle);
 
-// Call mulipleCells
+// default grid of 16
+multipleCells(16)
