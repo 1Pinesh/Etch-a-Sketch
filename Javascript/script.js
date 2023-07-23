@@ -29,6 +29,10 @@ function multipleCells(number) {
         newCell.style.width  = cellSize + "px"
         newCell.style.height = cellSize + "px"
 
+        // give new cell margin and padding
+        newCell.style.padding = "0px"
+        newCell.style.margin = "0px"
+
         // add the cells into container
         grid_con.appendChild(newCell)
     }

@@ -3,6 +3,13 @@ background-color: #524632;
 margin: 0;
 padding: 0;
 }
+/* one the cell has reach the end it goes to the next row any thing that goes outside the container will be hidden*/
+.grid-con{
+    border: 6px solid #C3C49E;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
 
 /* give the cells a white background */
 .cells {
