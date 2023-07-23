@@ -1,6 +1,5 @@
 let valueChange
 
-
 // Making a container
 const grid_con = document.createElement("div");
 
@@ -11,10 +10,11 @@ grid_con.classList.add("grid-con");
 grid_con.style.width = "500px";
 grid_con.style.height = "500px";
 
+
 // Making a input & Button
 const input_box = document.createElement("input");
 const input_btn = document.createElement("button");
-input_btn.textContent = "Apply"
+input_btn.textContent = "Apply";
 input_box.id = "input_box";
 input_btn.ix = "inputBtn";
 
