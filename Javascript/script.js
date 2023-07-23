@@ -9,32 +9,37 @@ grid_con.style.width = "500px";
 grid_con.style.height = "500px";
 
 // adding the grid-con into the html file
-document.body.appendChild(grid_con)
+document.body.appendChild(grid_con);
 
 // Functon multiple cells
 function multipleCells(number) {
     // this will give each cell 
-    const cellSize = 500/number
+    const cellSize = 500/number;
     // create give the amount of cells needed (e.g 16*16 = 256 divs)
-    const squareNums = number * number
+    const squareNums = number * number;
 
 //make a loop that will keep making cells 
     for(let i = 0; i <= squareNums ; i ++) {
         // Make a new cell
-        const newCell = document.createElement("div")
+        const newCell = document.createElement("div");
         // give the cells a class 
-        newCell.classList.add("cells")
+        newCell.classList.add("cells");
 
         // give cell width and height
-        newCell.style.width  = cellSize + "px"
-        newCell.style.height = cellSize + "px"
+        newCell.style.width  = cellSize + "px";
+        newCell.style.height = cellSize + "px";
 
         // give new cell margin and padding
-        newCell.style.padding = "0px"
-        newCell.style.margin = "0px"
+        newCell.style.padding = "0px";
+        newCell.style.margin = "0px";
 
         // add the cells into container
-        grid_con.appendChild(newCell)
+        grid_con.appendChild(newCell);
+
+        // eventlisner turn the cell black if the cell is clicked
+        newCell.addEventListener("click", ()=> {
+            newCell.style.background = "black";
+        })
     }
 }
 
