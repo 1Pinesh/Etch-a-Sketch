@@ -24,17 +24,21 @@ grid_con.style.width = "500px";
 grid_con.style.height = "500px";
 
 // input-container
+const input_con =  document.createElement("div");
+input_con.classList.add("input-con");
+
 // Making a input & Button
 const input_box = document.createElement("input");
 const input_btn = document.createElement("button");
 input_btn.textContent = "Apply";
 input_box.id = "input_box";
 input_btn.ix = "inputBtn";
+input_con.appendChild(input_box);
+input_con.appendChild(input_btn);
 
 // adding the grid-con,input-box and button into the html file
  document.body.appendChild(title_con)
- document.body.appendChild(input_box);
- document.body.appendChild(input_btn);
+ document.body.appendChild(input_con);
  document.body.appendChild(grid_con);
 
 
@@ -72,8 +76,6 @@ function multipleCells(number) {
         newCell.addEventListener("click", ()=> {
             newCell.style.background = "black";
         })
-
-
     }
 }
 
