@@ -14,4 +14,10 @@ padding: 0;
 /* give the cells a white background */
 .cells {
     background-color: white;
+    transition: ease-out 0.5s;
+}
+
+/* hover Effect */
+.cells:hover {
+    background-color: black;
 }
