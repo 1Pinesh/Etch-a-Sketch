@@ -25,6 +25,10 @@ function multipleCells(number) {
         // give the cells a class 
         newCell.classList.add("cells")
 
+        // give cell width and height
+        newCell.style.width  = cellSize + "px"
+        newCell.style.height = cellSize + "px"
+
         // add the cells into container
         grid_con.appendChild(newCell)
     }
